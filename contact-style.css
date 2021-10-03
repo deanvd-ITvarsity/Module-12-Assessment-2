@@ -231,9 +231,13 @@ label {
     border-radius: 4px;
 }
 
-
-/* Styling Avatar Label */
-
 #avatarlabel {
     float: left;
+    margin-left: 80px;
+}
+
+@media(max-width:768px) {
+    #avatarlabel {
+        float: left;
+    }
 }
