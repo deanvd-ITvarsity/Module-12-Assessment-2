@@ -245,6 +245,7 @@ label {
 @media(max-width:768px) {
     #avatarlabel {
         float: left;
+        margin-left: -3px;
     }
     #avatar {
         margin-right: -30px;
