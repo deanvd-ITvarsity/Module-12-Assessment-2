@@ -127,16 +127,19 @@ input {
 }
 
 
+/* Styling Labels for inputs */
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
 /* Styling Avatar Image */
 
 #avatarImage img {
     border: 2px solid darkblue;
     border-radius: 4px;
-}
-
-label {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
 }
 
 
