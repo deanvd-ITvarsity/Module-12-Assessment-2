@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Contacts</title>
+    <link rel="stylesheet" href="contact-style.css">
+</head>
+
+<body>
+    <h2>Add Contact: </h2>
+    <br/>
+    <form id="editForm">
+        <input type="text" name="firstname" id="firstname" placeholder="Firstname"><br/>
+        <input type="text" name="lastname" id="lastname" placeholder="Lastname"><br/>
+        <input type="text" name="mobile" id="mobile" placeholder="Mobile"><br/>
+        <input type="text" name="email" id="email" placeholder="Email"><br/>
+        <label for="avatar">Select a File</label>
+        <input type="file" name="avatar" id="avatar" style="border: none;"><br/>
+        <br/><br/>
+        <button type="submit" id="submitForm">Submit</button>
+    </form>
+    <br/>
+    <button id="homeLink" type="button">Home</button>
+    <script src="config.js"></script>
+    <script>
+        document.getElementById("submitForm").addEventListener('click', submitForm);
+        document.getElementById("homeLink").addEventListener('click', homeLink);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            const form = new FormData(document.querySelector('#editForm'));
+            form.append('apiKey', apiKey);
+
+            fetch(rootPath + 'controller/insert-contact/', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json, *.*'
+                    },
+                    body: form
+                })
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(data) {
+                    if (data == "1") {
+                        alert("Contact Added!");
+                        homeLink();
+                    } else {
+                        alert(data);
+                        homeLink();
+                    }
+
+                })
+        }
+
+        function homeLink() {
+            window.open("index.html", "_self");
+        }
+    </script>
+</body>
+
+</html>
