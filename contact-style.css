@@ -246,4 +246,7 @@ label {
     #avatarlabel {
         float: left;
     }
+    #avatar {
+        margin-right: -30px;
+    }
 }
