@@ -135,6 +135,22 @@ label {
 }
 
 
+/* Styling Avatar Image */
+
+#avatarImage img {
+    border: 2px solid darkblue;
+    border-radius: 4px;
+}
+
+
+/* Styling Avatar Label */
+
+#avatarlabel {
+    float: left;
+    margin-left: 80px;
+}
+
+
 /* Styling  Submit Button*/
 
 #submitForm {
@@ -224,17 +240,7 @@ label {
 }
 
 
-/* Styling Avatar Image */
-
-#avatarImage img {
-    border: 2px solid darkblue;
-    border-radius: 4px;
-}
-
-#avatarlabel {
-    float: left;
-    margin-left: 80px;
-}
+/* Styling Responsive Layout */
 
 @media(max-width:768px) {
     #avatarlabel {
