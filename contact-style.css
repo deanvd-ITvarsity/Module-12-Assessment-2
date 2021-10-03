@@ -147,7 +147,7 @@ label {
 
 #avatarlabel {
     float: left;
-    margin-left: 80px;
+    margin-left: 125px;
 }
 
 
@@ -242,10 +242,20 @@ label {
 
 /* Styling Responsive Layout */
 
+@media(max-width:984px) {
+    #avatarlabel {
+        float: left;
+        margin-left: 95px;
+    }
+    #avatar {
+        margin-right: -30px;
+    }
+}
+
 @media(max-width:768px) {
     #avatarlabel {
         float: left;
-        margin-left: 40px;
+        margin-left: 50px;
     }
     #avatar {
         margin-right: -30px;
